@@ -1,10 +1,10 @@
 package types
 
-//Money представляет собой денежную сумму в минимальныч единицах (центы, копейки, дирамы и т.д.) 
+//Money представляет собой денежную сумму в минимальныч единицах (центы, копейки, дирамы и т.д.)
 type Money int64
 
 // Currency представляет код валюты
-type Currency string 
+type Currency string
 
 // Коды валют
 const (
@@ -29,6 +29,12 @@ type Card struct {
 }
 
 type Payment struct {
-	ID int 
+	ID     int
 	Amount Money
+}
+
+type PaymentSource struct {
+	Type    string
+	Number  string
+	Balance Money
 }
